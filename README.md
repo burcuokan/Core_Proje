@@ -48,6 +48,7 @@
 • **Profilimi Düzenle:** Yazar ad, soyad, şifre ve profil resmi bilgilerini güncelleyebilir.
 
 📌 **Projede Kullanılan Teknolojiler**
+
  ✅ ASP.NET Core MVC (.NET Core 5)
  
  ✅ Microsoft SQL Server
