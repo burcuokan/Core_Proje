@@ -1,0 +1,41 @@
+﻿@using EntityLayer.Concrete
+@model List<WriterMessage>
+@{
+    ViewData["Title"] = "ReceiverMessage";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Gelen Kutusu</h4>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Konu</th>
+                            <th>Gönderen</th>
+                            <th>Tarih</th>
+                            <th>Detaylar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var x in Model)
+                        {             
+                            <tr>
+                                <th>@x.WriterMessageID</th>
+                                <td>@x.Subject</td>
+                                <td>@x.SenderName</td>
+                                <td>@(((DateTime)x.Date).ToString("dd MMM yyyy"))</td>
+                                <td><a href="/Writer/Message/MessageDetails/@x.WriterMessageID" class="btn btn-primary">Mesajı Gör</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
